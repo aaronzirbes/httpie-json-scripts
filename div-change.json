@@ -1,0 +1,18 @@
+{
+    "divisionBloomId": "692E0C3C119A11E1942912313F047E54",
+    "divisionName": null,
+    "employeeId": null,
+    "employerBloomId": "68F00AEA119A11E1942912313F047E54",
+    "enrollmentAvailableFrom": [2014, 2, 1],
+    "enrollmentAvailableTo": [2014, 2, 15],
+    "eventDate": [2014, 1, 15],
+    "externalDependentId": null,
+    "familyMemberBloomId": null,
+    "memberBloomId": "491bdab944964657be00097553accccd",
+    "memberEventBloomId": null,
+    "specifiedEffectiveDate": [2014, 2, 1],
+    "sponsorBloomId": "0570EEC431DB11E191ED12313F047E54",
+    "today": [2014, 2, 3],
+    "type": "CHANGE_DIVISION",
+    "validateOnly": true
+}
