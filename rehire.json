@@ -1,0 +1,16 @@
+{
+    "divisionBloomId": null,
+    "employerBloomId": "2452787b8f8a4f059700371754ff2a9a",
+    "enrollmentAvailableFrom": [2014, 2, 12],
+    "enrollmentAvailableTo": [2014, 4, 13],
+    "eventDate": [2014, 2, 12],
+    "externalDependentId": null,
+    "familyMemberBloomId": null,
+    "memberBloomId": "52ca1a5ba7d849708806d84e2c9c6540",
+    "memberEventBloomId": null,
+    "specifiedEffectiveDate": null,
+    "sponsorBloomId": "9c4b900510524ad7a2750de71436278b",
+    "today": [2014, 2, 12],
+    "type": "REHIRE",
+    "validateOnly": true
+}
