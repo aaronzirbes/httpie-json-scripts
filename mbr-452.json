@@ -1,0 +1,16 @@
+{
+    "divisionBloomId": null,
+    "employerBloomId": "2f68f7b224884e81b493917171f609d7",
+    "enrollmentAvailableFrom": [2014, 2, 25],
+    "enrollmentAvailableTo": [2014, 3, 15],
+    "eventDate": [2014, 2, 25],
+    "externalDependentId": null,
+    "familyMemberBloomId": null,
+    "memberBloomId": "e21ba42ab68949dd843354efcac53c98",
+    "memberEventBloomId": null,
+    "specifiedEffectiveDate": [2014, 2, 25],
+    "sponsorBloomId": "0570EFB431DB11E191ED12313F047E54",
+    "today": [2014, 2, 25],
+    "type": "MARRIAGE",
+    "validateOnly": true
+}

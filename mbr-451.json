@@ -1,0 +1,16 @@
+{
+    "divisionBloomId": "O99SL28EU1W8E882U005X78QWW3VJ0K1",
+    "employerBloomId": "68F018F0119A11E1942912313F047E54",
+    "enrollmentAvailableFrom": [2014, 2, 24],
+    "enrollmentAvailableTo": [2014, 4, 24],
+    "eventDate": [2014, 2, 24],
+    "externalDependentId": null,
+    "familyMemberBloomId": null,
+    "memberBloomId": "547WVYA0QSM72V984K262836E8T5B16H",
+    "memberEventBloomId": null,
+    "specifiedEffectiveDate": null,
+    "sponsorBloomId": "0570EFB431DB11E191ED12313F047E54",
+    "today": [2014, 2, 24],
+    "type": "DROP_DEPENDENT",
+    "validateOnly": true
+}
