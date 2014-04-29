@@ -1,0 +1,6 @@
+{
+    "employerBloomId": "692E0CB4119A11E1942912313F047E54",
+    "loadFilePath": "file:///Users/azirbes/br/services/member/member-etl/src/test/resources/fixtures/sample-roster-group-active-errors.csv",
+    "loadRestriction":  "LOAD_ALL",
+    "now": [2014, 4, 15, 10, 15, 0]
+}
