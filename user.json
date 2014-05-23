@@ -1,0 +1,24 @@
+{
+    "disabledReason": null,
+    "email": "azirbes@bloomhealth.com",
+    "enabled": true,
+    "failedLoginAttempts": 0,
+    "firstName": "Matt",
+    "id": null,
+    "lastName": "Zirbes",
+    "locked": false,
+    "lockedReason": null,
+    "memberBloomId": "e8819ffd0fe74320822ad01150fbb401",
+    "pendingEmail": null,
+    "roles": ["ROLE_MEMBER"],
+    "userCredentials": {
+        "zipCode": "55413",
+        "dateOfBirth": [1979, 11, 21],
+        "lastFourSsn": "3004",
+        "lastName": "Zirbes",
+        "hasSetPassword": false,
+        "hasVerifiedInfo": false,
+        "firstTimeLoggedInDate": null
+    },
+    "username": "UNKNOWN-EUC47502M7LQ67191SDB"
+}

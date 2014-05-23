@@ -5,3 +5,4 @@ apihost=localhost
 employer_service=${apihost}:8090
 member_service=${apihost}:8092
 product_service=${apihost}:8094
+user_service=${apihost}:8104
