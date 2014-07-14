@@ -1,0 +1,16 @@
+{
+    "divisionBloomId": null,
+    "employerBloomId": "b5f09653f2a5434abe2a1b1204ee4fc1",
+    "enrollmentAvailableFrom": [2014, 7, 11],
+    "enrollmentAvailableTo": [2014, 7, 11],
+    "eventDate": [2014, 7, 11],
+    "externalDependentId": null,
+    "familyMemberBloomId": null,
+    "memberBloomId": "6b3ed9e813c84ba1854cc548a8555e57",
+    "memberEventBloomId": null,
+    "specifiedEffectiveDate": null,
+    "sponsorBloomId": "0570EEC431DB11E191ED12313F047E54",
+    "today": [2014, 7, 11],
+    "type": "REINSTATE_PRIOR_COVERAGE",
+    "validateOnly": true
+}
