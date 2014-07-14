@@ -12,5 +12,5 @@
     "sponsorBloomId": "0570EEC431DB11E191ED12313F047E54",
     "today": [2014, 7, 11],
     "type": "REINSTATE_PRIOR_COVERAGE",
-    "validateOnly": true
+    "validateOnly": false
 }
