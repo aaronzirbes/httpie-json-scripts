@@ -1,0 +1,12 @@
+{
+    "key": "zirbes",
+    "hidden": false,
+    "name": "Aaron J. Zirbes",
+    "dealerId": "ajz",
+    "emailAddresses": [
+        {
+            "nickName": "Personal",
+            "address": "aaron.zirbes@fake"
+        }
+    ]
+}
