@@ -1,2 +1,7 @@
 #dealer_service='http://localhost:8080/dealer-entity-service'
 dealer_service='http://localhost:8080'
+#dealer_service='http://54.174.24.205:8080/dealer-entity-service'
+
+customer_service='http://localhost:8080'
+#customer_service='http://54.174.24.205:8080/dealer-entity-service'
+

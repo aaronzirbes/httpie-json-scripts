@@ -1,0 +1,13 @@
+{
+    "key" : "NEW",
+    "hidden" : false,
+    "name" : "Adam Roddy",
+    "customerId" : "adam",
+    "emailAddresses" : [
+        {
+            "nickName" : "Fun",
+            "address" : "aroddy@google.com"
+        }
+    ],
+    "extraField" : "ignore"
+}
