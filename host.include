@@ -1,8 +1,9 @@
-#apihost=localhost
-apihost=vagrant.moolb.com
+#dealer_service='http://localhost:8080/dealer-entity-service'
+dealer_service='http://localhost:8080'
+#dealer_service='http://54.174.24.205:8080/dealer-entity-service'
 
-# service host + port configs
-employer_service=${apihost}:8090
-member_service=${apihost}:8092
-product_service=${apihost}:8094
-user_service=${apihost}:8104
+customer_service='http://localhost:8080'
+#customer_service='http://54.174.24.205:8080/dealer-entity-service'
+
+vehicle_service='http://localhost:8080'
+#vehicle_service='http://54.174.24.205:8080/vehicle-entity-service'

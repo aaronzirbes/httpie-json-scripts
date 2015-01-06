@@ -1,0 +1,33 @@
+{
+    "key": "peoplenet:dealer:32dfc7d2-8bf4-4d1b-9fc7-d28bf45d1bfb",
+    "hidden": false,
+    "name": "Aaron J. Zirbes",
+    "dealerId": "ajz",
+    "addresses":[
+        {
+            "city":"Minnetonka",
+            "countryCode":"US",
+            "county":"Hennepin",
+            "nickName":"Primary",
+            "state":"MN",
+            "streetAddress":"4400 Baker Rd",
+            "zipcode":"55343"
+        }
+    ],
+    "location":{
+        "lat":44.92177,
+        "lon":-93.44926
+    },
+    "emailAddresses": [
+        {
+            "nickName": "Personal",
+            "address": "aaron.zirbes@fake"
+        }
+    ],
+    "phoneNumbers":[
+        {
+            "nickName":"Toll Free Phone",
+            "number":"8883463486"
+        }
+    ]
+}
