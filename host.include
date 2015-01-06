@@ -1,5 +1,5 @@
-apihost=localhost
-#apihost=vagrant.moolb.com
+#apihost=localhost
+apihost=vagrant.moolb.com
 
 # service host + port configs
 employer_service=${apihost}:8090

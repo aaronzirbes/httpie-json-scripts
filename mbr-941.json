@@ -1,0 +1,12 @@
+{
+    "memberBloomId": "1B0PQ9U93SCWXS6N9S8EBTQ2A6N444M5",
+    "employerBloomId": "68EFF5B4119A11E1942912313F047E54",
+    "sponsorBloomId": "0570EEC431DB11E191ED12313F047E54",
+    "enrollmentAvailableFrom": [2014, 7, 31],
+    "enrollmentAvailableTo": [2014, 7, 31],
+    "eventDate": [2014, 7, 31],
+    "specifiedEffectiveDate": null,
+    "today": [2014, 7, 31],
+    "type": "REINSTATE_PRIOR_COVERAGE",
+    "validateOnly": true
+}
