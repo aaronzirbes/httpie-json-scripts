@@ -1,0 +1,57 @@
+{
+    "actualApprovalDate":"2013-11-22",
+    "additionalInformation":"The aftertreatment ECU has severely limited the operation of the truck as a result of active faults with the aftertreament system.  Do not troubleshoot this fault code since it originates from other fault codes.",
+    "attention":"Vehicle requires immediate service.",
+    "cascadeIn": [
+        "P151E",
+        "P151B"
+    ],
+    "cascadeOut": [ 
+        "P151B" 
+    ],
+    "comments": [
+        "Do not troubleshoot this DTC since it originates from another active DTC."
+    ],
+    "currentState":"5 mph Speed Limitation - 40% Power Derate",
+    "derateTextList":[
+        "DRT1",
+        "DRT2"
+    ],
+    "dtc":"P151A",
+    "dtcDescription":"A vehicle speed limitation is active as a result of one or more active faults in the emission control system.",
+    "elevate":true,
+    "email": true,
+    "emailBucket":"ALL",
+    "estimatedApprovalDate":"2000-01-01",
+    "exportDtcIndicator": true,
+    "faultVariable":"DEFOI_VSPD_LIMIT_SLMP_DATA_APV",
+    "fmi":14,
+    "guidanceList": [{
+        "driverInvolved":false,
+        "jobCode":"J 1413 473301 001 000",
+        "possibleCause":"P1514 - Emission control system detected a DEF dosing fault.",
+        "possibleParts":[
+            "Pressure sensor after BPV (1822253)"
+        ],
+        "probability":"probably"
+    }],
+    "lampFaultList": [
+        "R2",
+        "D2"
+    ],
+    "lamps": [
+        "Stop Engine",
+        "Get To The Chopper"
+    ],
+    "modelYear":13,
+    "notificationRevision":"C",
+    "rc":7,
+    "recommendedAction":"SERVICE_NOW",
+    "revisedDate":"2018-04-03",
+    "severity":9,
+    "spn":74,
+    "subsystem":"Protection",
+    "system":"EAS",
+    "tdtName":"Clint Bushong",
+    "timestamp": "2000-01-01T12:00:00.000"
+}

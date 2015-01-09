@@ -1,9 +1,17 @@
-#dealer_service='http://localhost:8080/dealer-entity-service'
 dealer_service='http://localhost:8080'
 #dealer_service='http://dealer-dev.connectedfleet.io:8080'
 
 customer_service='http://localhost:8080'
 #customer_service='http://customer-dev.connectedfleet.io:8080'
+
+device_service='http://localhost:8080'
+#device_service='http://device-dev.connectedfleet.io:8080'
+
+faultcode_service='http://localhost:8080'
+#faultcode_service='http://faultcode-dev.connectedfleet.io:8080'
+
+manufacturer_service='http://localhost:8080'
+#manufacturer_service='http://manufacturer-dev.connectedfleet.io:8080'
 
 vehicle_service='http://localhost:8080'
 #vehicle_service='http://vehicle-dev.connectedfleet.io:8080'

@@ -1,6 +1,4 @@
 {
-    "key" : "NEW",
-    "hidden" : false,
     "name" : "Adam Roddy",
     "customerId" : "adam",
     "emailAddresses" : [
@@ -9,5 +7,6 @@
             "address" : "aroddy@google.com"
         }
     ],
-    "extraField" : "ignore"
+    "extraField" : "ignore",
+    "oems" : [ "PACCAR" ]
 }

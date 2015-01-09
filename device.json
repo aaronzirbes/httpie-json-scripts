@@ -1,0 +1,11 @@
+{
+    "commsProfileId": "testCommsProfileId",
+    "dsn": 123456789,
+    "esn": "666",
+    "mdn": "333",
+    "min": "111",
+    "oem": "PACCAR",
+    "state": "inactive",
+    "tags": ["TEST"],
+    "timestamp": "2000-01-01T12:00:00.000"
+}

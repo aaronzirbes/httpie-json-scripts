@@ -12,5 +12,3 @@ path="/dealers/${1}"
 # https://github.com/jkbr/httpie
 echo "http GET ${dealer_service}${path}"
 time http GET ${dealer_service}${path}
-
-

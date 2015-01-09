@@ -1,0 +1,12 @@
+{
+    "name" : "Aaron Zirbes",
+    "customerId" : "zirbes",
+    "emailAddresses" : [
+        {
+            "nickName" : "Work",
+            "address" : "aaron@zirbes.org"
+        }
+    ],
+    "extraField" : "ignore",
+    "oems" : [ "PACCAR" ]
+}

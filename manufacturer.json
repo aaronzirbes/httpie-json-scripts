@@ -1,0 +1,8 @@
+{
+    "manufacturerId": "testId123",
+    "name": "testName",
+    "oem": "PACCAR",
+    "tags": ["TEST"],
+    "timestamp": "2000-01-01T12:00:00.000"
+}
+
