@@ -1,0 +1,21 @@
+{
+  "addresses": [],
+  "customerAlias": null,
+  "customerId": "zirbes",
+  "dealerKey": null,
+  "emailAddresses": [
+    {
+      "address": "aaron@aaronzirbes.com",
+      "nickName": "Work"
+    }
+  ],
+  "fleetManagementKey": null,
+  "hidden": false,
+  "key": "peoplenet:customer:f46f7ec7-1021-4018-af7e-c71021401899",
+  "name": "Aaron Zirbes",
+  "oems": [
+    "paccar"
+  ],
+  "phoneNumbers": [],
+  "timestamp": "2015-01-12T20:44:55.884"
+}

@@ -1,17 +1,17 @@
-dealer_service='http://localhost:8080'
-#dealer_service='http://dealer-dev.connectedfleet.io:8080'
+#!/bin/bash
 
-customer_service='http://localhost:8080'
-#customer_service='http://customer-dev.connectedfleet.io:8080'
+_host=localhost
 
-device_service='http://localhost:8080'
-#device_service='http://device-dev.connectedfleet.io:8080'
+_services="customer dealer device faultcode manufacturer user vehicle search"
 
-faultcode_service='http://localhost:8080'
-#faultcode_service='http://faultcode-dev.connectedfleet.io:8080'
+_environment=local
+#_environment=qa
+#_environment=dev
 
-manufacturer_service='http://localhost:8080'
-#manufacturer_service='http://manufacturer-dev.connectedfleet.io:8080'
+for service in ${_services}; do
+    if [ ${_environment} != local ]; then
+        _host=${service}-${_environment}.connectedfleet.io
+    fi
 
-vehicle_service='http://localhost:8080'
-#vehicle_service='http://vehicle-dev.connectedfleet.io:8080'
+    eval "${service}_service='http://${_host}:8080'"
+done
