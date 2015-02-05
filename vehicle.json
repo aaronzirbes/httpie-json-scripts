@@ -1,14 +1,59 @@
 {
-    "customerKey": "FAKE_CUSTOMER_KEY_0001",
-    "dealerKey": "FAKE_DEALER_KEY_0001",
-    "description": "A pretty rad car",
-    "deviceKey": "FAKE_DEVICE_KEY_0001",
-    "manufacturerKey": "FAKE_MANUFACTURER_KEY_0001",
-    "name": "Ferarri Testarosa",
-    "oem": "PACCAR",
+    "chassisBuildDate": "1994-11-22",
+    "chassisId": 1,
+    "chassisModelYear": 2000,
+    "description": "Test Car from Aaron's Shell Script",
+    "engineBuildDate": "1994-11-22",
+    "engineFamily": "TEST-ENGINE-FAMILY",
+    "engineModelYear": 2000,
+    "hidden": false,
+    "name": "Still a test car from Aaron's bash script",
+    "oem": "paccar",
+    "state": "manufacturing",
     "subscriptionEnd": "2018-04-03",
     "subscriptionStart": "2000-01-01",
     "subscriptionStatus": "ACTIVE",
     "tags": ["TEST"],
-    "vin": "VIN2039482304982323"
+    "timestamp": "2000-01-01T12:00:00.000",
+    "truckMake": "P",
+    "unitNumber": "AARONS_UNIT_NUMBER_1234",
+    "vin": "VIN2039482304982323",
+    "vinRollCallData": [
+        {
+            "componentIdData": {
+                "make": "Subaru",
+                "model": "Impreza",
+                "serialNumber": "1234asdf",
+                "unitNumber": "2003"
+            },
+            "dm19Data": [{
+                "cvn": "12345",
+                "calId": "1111111111"
+            },
+            {
+                "cvn": "67890",
+                "calId": "2222222222"
+            }],
+            "softwareIds": ["AWD_SOFT_ID"],
+            "sourceAddress": 1
+        },
+        {
+            "componentIdData": {
+                "make": "Jeep",
+                "model": "Wrangler",
+                "serialNumber": "7890asdf",
+                "unitNumber": "1998"
+            },
+            "dm19Data": [{
+                "cvn": "12345",
+                "calId": "1111111111"
+            },
+            {
+                "cvn": "67890",
+                "calId": "2222222222"
+            }],
+            "softwareIds": ["MOPAR_SOFT_ID"],
+            "sourceAddress": 1
+        }
+    ]
 }

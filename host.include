@@ -4,9 +4,10 @@ _host=localhost
 
 _services="customer dealer device faultcode manufacturer user vehicle search"
 
-_environment=local
+#_environment=local
 #_environment=qa
 #_environment=dev
+_environment=staging
 
 for service in ${_services}; do
     if [ ${_environment} != local ]; then
