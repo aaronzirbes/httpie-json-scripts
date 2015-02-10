@@ -7,8 +7,16 @@ service=$1
 lat=$2
 lon=$3
 
+if [ "$service" == "" ]; then
+    echo "You must supply a service name"
+    exit 1
+fi
+
 if [ "$lat" == "" ]; then
     echo "You must supply a latitude and longitude"
+    lat=45.831335
+    lon=-95.383322
+    echo "    for example: ./find dealer $lat $lon
     exit 1
 fi
 
