@@ -1,0 +1,18 @@
+#!/bin/bash
+
+. host.include
+
+countStr=3
+service=$1
+
+if [ "$service" == "" ]; then
+    echo "You must supply a service name"
+    exit 1
+fi
+
+BASE_URL=`getUrl entity-gateway`/${service}s
+
+# https://github.com/jkbr/httpie
+echo "http GET ${BASE_URL} ${HEADERS}"
+time http GET ${BASE_URL} ${HEADERS}
+

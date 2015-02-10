@@ -1,0 +1,27 @@
+#!/bin/bash
+
+. host.include
+
+countStr=3
+service=$1
+lat=$2
+lon=$3
+
+if [ "$lat" == "" ]; then
+    echo "You must supply a latitude and longitude"
+    exit 1
+fi
+
+if [ "$lon" == "" ]; then
+    echo "You must supply a latitude and longitude"
+    exit 1
+fi
+
+path="/by-location/${countStr}@${lat},${lon}"
+
+# https://github.com/jkbr/httpie
+
+BASE_URL=`getUrl entity-gateway`/${service}s
+
+echo "http GET ${BASE_URL}${path} ${HEADERS}"
+time http GET ${BASE_URL}${path} ${HEADERS}

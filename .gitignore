@@ -4,3 +4,4 @@
 *.iws
 *.log
 *.orig
+.auth-token.json

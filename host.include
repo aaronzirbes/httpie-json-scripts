@@ -1,18 +1,81 @@
 #!/bin/bash
 
-_host=localhost
+USERNAME=bsmith@test.com
+PASSWORD=password
+CLIENT_ID=OEMPortal
 
-_services="customer dealer device faultcode manufacturer user vehicle search"
+HEADERS=''
 
 #_environment=local
 #_environment=qa
-#_environment=dev
-_environment=staging
+_environment=dev
+#_environment=staging
+
+_host=localhost
+_services="customer dealer device faultcode manufacturer user vehicle search"
+
+function getUrl() {
+    SERVICE=$1
+    # _host=${service}-${_environment}.connectedfleet.io
+    _host=security-gateway-${_environment}.connectedfleet.io
+    echo ${_host}:8080/${SERVICE}
+}
+
+function loginIfExpired() {
+    if [ -f .auth-token.json ]; then
+        issue_time=`cat .auth-token.json | awk '/"issAt":/{print substr($2,1)}' |sed -e 's/, *$//'`
+        refresh_time=`cat .auth-token.json | awk '/"refreshExp":/{print substr($2,1)}' |sed -e 's/, *$//'`
+        expire_time=`cat .auth-token.json | awk '/"accessExp":/{print substr($2,1)}' |sed -e 's/, *$//'`
+        date_epoch_time=`date -u +%s`
+        epoch_time=`expr $date_epoch_time \* 1000`
+
+        echo "Access Token Issued: ${issue_time}" 1>&2
+        echo "                Now: ${epoch_time}" 1>&2
+        echo "            Expires: ${expire_time}" 1>&2
+        echo "       Last Refresh: ${refresh_time}" 1>&2
+
+        if ((( $epoch_time < $expire_time ))); then
+            echo "  Access Token not expired yet." 1>&2
+            ENCODED_TOKEN=`cat .auth-token.json | awk '/"encodedToken":/{print substr($2,2)}' |sed -e 's/", *$//'`
+        else
+            echo "  Access Token has expired." 1>&2
+            ENCODED_TOKEN=`login`
+        fi
+    else
+        echo "  No access Token found." 1>&2
+        ENCODED_TOKEN=`login`
+    fi
+    echo $ENCODED_TOKEN
+}
+
+function login() {
+    # http://security-gateway-dev.connectedfleet.io:8080/authentication-service/userLogin
+    path='/userLogin'
+    url=`getUrl authentication-service`${path}
+
+    echo "Logging in" 1>&2
+
+    http --pretty format \
+        POST \
+        $url \
+        clientId=$CLIENT_ID \
+        password=$PASSWORD \
+        username=$USERNAME \
+        > .auth-token.json
+
+    ENCODED_TOKEN=`cat .auth-token.json | awk '/"encodedToken":/{print substr($2,2)}' |sed -e 's/", *$//'`
+    echo "Received token: $ENCODED_TOKEN" 1>&2
+    echo $ENCODED_TOKEN
+}
 
 for service in ${_services}; do
     if [ ${_environment} != local ]; then
-        _host=${service}-${_environment}.connectedfleet.io
+        # _host=${service}-${_environment}.connectedfleet.io
+        _host=security-gateway-dev.connectedfleet.io
     fi
 
-    eval "${service}_service='http://${_host}:8080'"
+    eval "${service}_service='http://${_host}:8080/${service}s'"
 done
+
+TOKEN=`loginIfExpired`
+HEADERS="X-Auth-Token:${TOKEN}"
