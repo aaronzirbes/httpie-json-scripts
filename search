@@ -1,0 +1,33 @@
+#!/bin/bash
+
+. host.include
+
+countStr=3
+service=search-service
+index=entities
+mapping=$1
+q=$2
+
+if [ "$mapping" == "" ]; then
+    echo "You must supply a type of thing"
+    exit 1
+fi
+
+if [ "$q" == "" ]; then
+    echo "You must specify the string to find"
+    exit 1
+fi
+
+BASE_URL=`getUrl entity-gateway`/${service}
+#BASE_URL=http://search-dev.connectedfleet.io:8080
+
+URI_PATH=/indexes/${index}/types/${mapping}/search
+#URI_PATH=/indexes/${index}/search
+
+PARAMS="page==0 pageSize==10 q==$q"
+#PARAMS=''
+
+# https://github.com/jkbr/httpie
+echo "http GET ${BASE_URL}${URI_PATH} ${HEADERS} ${PARAMS}"
+time http GET ${BASE_URL}${URI_PATH} ${HEADERS} ${PARAMS}
+
