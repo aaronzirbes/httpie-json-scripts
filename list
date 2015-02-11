@@ -10,10 +10,16 @@ if [ "$service" == "" ]; then
     exit 1
 fi
 
+filter=$2
+
 BASE_URL=`getUrl entity-gateway`/${service}s
 #BASE_URL=http://customer-dev.connectedfleet.io:8080/${service}s
 
 PARAMS="page==0 pageSize==10 sortField==name"
+
+if [ "$filter" != "" ]; then
+    PARAMS="$PARAMS q==${filter}"
+fi
 
 # https://github.com/jkbr/httpie
 echo "http GET ${BASE_URL} ${HEADERS} ${PARAMS}"
