@@ -11,14 +11,26 @@ HEADERS=''
 _environment=dev
 #_environment=staging
 
+#_gateway=true
+_gateway=true
+
+# Allow env override
+if [ "${USE_GATEWAY}" == "true" ]; then
+    _gateway=true
+elif [ "${USE_GATEWAY}" == "false" ]; then
+    _gateway=false
+fi
+
 _host=localhost
 _services="customer dealer device faultcode manufacturer user vehicle search"
 
 function getUrl() {
     SERVICE=$1
-    # _host=${service}-${_environment}.connectedfleet.io
-    _host=security-gateway-${_environment}.connectedfleet.io
-    echo ${_host}:8080/${SERVICE}
+    if [ "${_gateway}" == "true" ]; then
+        echo "security-gateway-${_environment}.connectedfleet.io:8080/${SERVICE}"
+    else
+        echo "${SERVICE}-${_environment}.connectedfleet.io:8080"
+    fi
 }
 
 function loginIfExpired() {
@@ -49,23 +61,25 @@ function loginIfExpired() {
 }
 
 function login() {
-    # http://security-gateway-dev.connectedfleet.io:8080/authentication-service/userLogin
-    path='/userLogin'
-    url=`getUrl authentication-service`${path}
+    if [ "${_gateway}" == "true" ]; then
+        # http://security-gateway-dev.connectedfleet.io:8080/authentication-service/userLogin
+        path='/userLogin'
+        url=`getUrl authentication-service`${path}
 
-    echo "Logging in" 1>&2
+        echo "Logging in" 1>&2
 
-    http --pretty format \
-        POST \
-        $url \
-        clientId=$CLIENT_ID \
-        password=$PASSWORD \
-        username=$USERNAME \
-        > .auth-token.json
+        http --pretty format \
+            POST \
+            $url \
+            clientId=$CLIENT_ID \
+            password=$PASSWORD \
+            username=$USERNAME \
+            > .auth-token.json
 
-    ENCODED_TOKEN=`cat .auth-token.json | awk '/"encodedToken":/{print substr($2,2)}' |sed -e 's/", *$//'`
-    echo "Received token: $ENCODED_TOKEN" 1>&2
-    echo $ENCODED_TOKEN
+        ENCODED_TOKEN=`cat .auth-token.json | awk '/"encodedToken":/{print substr($2,2)}' |sed -e 's/", *$//'`
+        echo "Received token: $ENCODED_TOKEN" 1>&2
+        echo $ENCODED_TOKEN
+    fi
 }
 
 for service in ${_services}; do
@@ -78,4 +92,8 @@ for service in ${_services}; do
 done
 
 TOKEN=`loginIfExpired`
-HEADERS="X-Auth-Token:${TOKEN}"
+if [ "${_gateway}" == "true" ]; then
+    HEADERS="X-Auth-Token:${TOKEN}"
+else
+    HEADERS=''
+fi

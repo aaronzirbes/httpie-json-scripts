@@ -16,7 +16,7 @@ if [ "$lat" == "" ]; then
     echo "You must supply a latitude and longitude"
     lat=45.831335
     lon=-95.383322
-    echo "    for example: ./find dealer $lat $lon
+    echo "    for example: ./find dealer $lat $lon"
     exit 1
 fi
 
@@ -29,7 +29,7 @@ path="/by-location/${countStr}@${lat},${lon}"
 
 # https://github.com/jkbr/httpie
 
-BASE_URL=`getUrl entity-gateway`/${service}s
+BASE_URL=`getUrl ${service}`/${service}s
 
 echo "http GET ${BASE_URL}${path} ${HEADERS}"
 time http GET ${BASE_URL}${path} ${HEADERS}

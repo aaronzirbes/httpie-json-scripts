@@ -16,7 +16,7 @@ if [ "$data" == "" ]; then
     exit 1
 fi
 
-BASE_URL=`getUrl entity-gateway`/${service}s
+BASE_URL=`getUrl ${service}`/${service}s
 
 # https://github.com/jkbr/httpie
 echo "http PUT ${BASE_URL} ${HEADERS}"

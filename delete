@@ -16,7 +16,7 @@ if [ "$key" == "" ]; then
     exit 1
 fi
 
-BASE_URL="`getUrl entity-gateway`/${service}s/${key}"
+BASE_URL="`getUrl ${service}`/${service}s/${key}"
 
 # https://github.com/jkbr/httpie
 echo "http DELETE ${BASE_URL} ${HEADERS}"
