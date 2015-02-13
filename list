@@ -12,7 +12,7 @@ fi
 
 filter=$2
 
-BASE_URL=`getUrl ${service}`/${service}s
+BASE_URL=`getUrl entity-gateway ${service}`/${service}s
 
 PARAMS="page==0 pageSize==10 sortField==name"
 

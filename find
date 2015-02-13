@@ -29,7 +29,7 @@ path="/by-location/${countStr}@${lat},${lon}"
 
 # https://github.com/jkbr/httpie
 
-BASE_URL=`getUrl ${service}`/${service}s
+BASE_URL=`getUrl entity-gateway ${service}`/${service}s
 
 echo "http GET ${BASE_URL}${path} ${HEADERS}"
 time http GET ${BASE_URL}${path} ${HEADERS}

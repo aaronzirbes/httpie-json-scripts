@@ -25,9 +25,10 @@ _host=localhost
 _services="customer dealer device faultcode manufacturer user vehicle search"
 
 function getUrl() {
-    SERVICE=$1
+    GATEWAY=$1
+    SERVICE=$2
     if [ "${_gateway}" == "true" ]; then
-        echo "security-gateway-${_environment}.connectedfleet.io:8080/${SERVICE}"
+        echo "security-gateway-${_environment}.connectedfleet.io:8080/${GATEWAY}"
     else
         echo "${SERVICE}-${_environment}.connectedfleet.io:8080"
     fi

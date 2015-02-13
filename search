@@ -18,7 +18,7 @@ if [ "$q" == "" ]; then
     exit 1
 fi
 
-BASE_URL=`getUrl entity-gateway`/${service}
+BASE_URL=`getUrl entity-gateway entity-gateway`/${service}
 #BASE_URL=http://search-dev.connectedfleet.io:8080
 
 URI_PATH=/indexes/${index}/types/${mapping}/search
