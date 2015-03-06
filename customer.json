@@ -8,5 +8,5 @@
         }
     ],
     "extraField" : "ignore",
-    "oems" : [ "PACCAR" ]
+    "oemKeys" : [ "PACCAR" ]
 }
